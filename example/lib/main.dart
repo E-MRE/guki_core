@@ -1,3 +1,4 @@
+import 'package:example/examples/display_messages_example.dart';
 import 'package:example/examples/results_example.dart';
 import 'package:flutter/material.dart';
 
@@ -31,25 +32,15 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   final ResultsExample _resultsExample = ResultsExample();
+  final DisplayMessagesExample _displayMessage = DisplayMessagesExample();
 
   String _oddNumberText = '';
   String _dataListText = '';
   int _counter = 0;
 
   void _onPressed() {
-    var isNumberResult = _resultsExample.isOdd(_counter);
-    var splitResult = _resultsExample.splitData(
-        'A,B,C,D', isNumberResult.success ? ',' : '.');
-
-    setState(() {
-      _oddNumberText =
-          '$_counter is ${isNumberResult.success ? 'odd' : 'even'}';
-
-      _dataListText =
-          '${splitResult.success ? 'Splitted Data: ' : ''} ${splitResult.data?.toString() ?? splitResult.message}';
-
-      _counter++;
-    });
+    _dataResultExamples();
+    _displayMessageExamples();
   }
 
   @override
@@ -80,5 +71,26 @@ class _MyHomePageState extends State<MyHomePage> {
         child: const Icon(Icons.add),
       ),
     );
+  }
+
+  void _dataResultExamples() {
+    var isNumberResult = _resultsExample.isOdd(_counter);
+    var splitResult = _resultsExample.splitData(
+        'A,B,C,D', isNumberResult.success ? ',' : '.');
+
+    setState(() {
+      _oddNumberText =
+          '$_counter is ${isNumberResult.success ? 'odd' : 'even'}';
+
+      _dataListText =
+          '${splitResult.success ? 'Splitted Data: ' : ''} ${splitResult.data?.toString() ?? splitResult.message}';
+
+      _counter++;
+    });
+  }
+
+  void _displayMessageExamples() {
+    _displayMessage.showAlert(context);
+    _displayMessage.showSnackBar(context);
   }
 }
