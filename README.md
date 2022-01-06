@@ -8,6 +8,7 @@ Core layer usable in every Flutter project.
 ## Features
 
 - Results: It usable for return operation result, message and/or data.
+- DisplayMessages: Use them for display mesage with SnackBar or AlertDialog.
 
 ## Getting started
 
@@ -24,6 +25,13 @@ guki_core:
 
 Include short and useful examples for package users. Add longer examples
 to `/example` folder. 
+
+v0.0.2:
+
+```dart
+DisplaySnackBar(context).errorMessage('Error message here');
+ DisplayAlertDialog(context).successAlert('Message is success');
+```
 
 v0.0.1:
 

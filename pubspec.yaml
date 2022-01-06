@@ -1,6 +1,6 @@
 name: guki_core
 description: Core package includes general tools for every flutter projects.
-version: 0.0.1
+version: 0.0.2
 homepage:
 
 environment:
