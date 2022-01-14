@@ -1,6 +1,6 @@
 name: guki_core
 description: Core package includes general tools for every flutter projects.
-version: 0.0.2
+version: 0.0.3
 homepage:
 
 environment:
@@ -14,10 +14,16 @@ dependencies:
   #HTTP Requests
   http:
 
+  #Json Serialization
+  json_annotation:
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^1.0.0
+
+  build_runner:
+  json_serializable:
 
 # The following section is specific to Flutter.
 flutter:

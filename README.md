@@ -26,11 +26,55 @@ guki_core:
 Include short and useful examples for package users. Add longer examples
 to `/example` folder. 
 
+v0.0.3
+Post Example (sends body and API returns json ):
+/* -- More Examples in the RemoteDataService  -- */
+
+```dart
+  DataResult<String> result = await postByResponseJson(
+  endpoint: 'api/Controller/AddUser',
+  body: {'userId':1,'name':'tester'},
+  headers: {'Content-type':'application/json'},
+  isJsonEncode = false,
+  timeoutDuration: DurationTypes.sixteenSeconds,
+  );
+```
+
+Get Example (get data by endpoint and query, API returns response model):
+
+```dart
+ ApiResponseModel<List<User>, User> result = await                     getDataByApiResponse<List<User>,User>(
+ endpoint: 'api/Controller/GetUsers',
+ query: '?type=customer',
+ parseModel: User(),
+ headers: {'Content-type':'application/json'},
+ apiResponse: ApiResponseModel(),
+ timeoutDuration: DurationTypes.sixteenSeconds,
+ );
+```
+
+```dart
+    convertApiResponse<TReturn, TParse>(
+      jsonBody: result.data?.body,
+      apiResponse: apiResponse ?? ApiResponseModel<TReturn, TParse>(),
+      parseModel: parseModel,
+    );
+```
+
+```dart
+double containerHeight = Sizes.normal.rawValue();
+```
+
+
+```dart
+Duration futureDelayed = DurationTypes.eightSeconds.rawValue();
+```
+
 v0.0.2:
 
 ```dart
 DisplaySnackBar(context).errorMessage('Error message here');
- DisplayAlertDialog(context).successAlert('Message is success');
+DisplayAlertDialog(context).successAlert('Message is success');
 ```
 
 v0.0.1:
