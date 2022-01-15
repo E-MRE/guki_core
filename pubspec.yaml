@@ -1,6 +1,6 @@
 name: guki_core
 description: Core package includes general tools for every flutter projects.
-version: 0.0.3
+version: 0.0.4
 homepage:
 
 environment:
@@ -17,6 +17,9 @@ dependencies:
   #Json Serialization
   json_annotation:
 
+  #Caching
+  hive_flutter:
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -24,6 +27,7 @@ dev_dependencies:
 
   build_runner:
   json_serializable:
+  hive_generator:
 
 # The following section is specific to Flutter.
 flutter:
