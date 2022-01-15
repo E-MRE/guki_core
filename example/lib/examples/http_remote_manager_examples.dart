@@ -148,12 +148,14 @@ class MyApiResponseModel<TData, TParse> implements ApiResponse<TData, TParse> {
 
   @override
   ApiResponse fromJson(Map<String, dynamic> json, {TParse? parseModel}) {
+    // ignore: todo
     //TODO: parse your json data
     return ApiResponseModel();
   }
 
   @override
   Map<String, dynamic> toJson() {
+    // ignore: todo
     // TODO: implement toJson
     return {};
   }

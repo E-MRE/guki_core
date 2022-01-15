@@ -1,3 +1,11 @@
+## 0.0.4
+
+- Locale Caching Added.
+    - Use HiveCachingManager for save data to the cache.
+
+- HiveRegistrationModel Created.
+    - For register more Hive adapters.
+
 ## 0.0.3
 
 - RemoteDataService created for API requests.

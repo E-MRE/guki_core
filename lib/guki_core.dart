@@ -20,3 +20,6 @@ export './src/services/index.dart';
 
 //Models
 export './src/models/index.dart';
+
+//Caching
+export './src/caching/index.dart';
