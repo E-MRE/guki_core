@@ -14,6 +14,10 @@ class HiveCachingManagerExamples {
   final HiveService _hiveService = HiveCachingManager.instance;
 
   Future<void> examples() async {
+    //Init operation important for Hive.
+    //You have to call it one time.
+    await _cachingService.init();
+
     var isSaved = await _cachingService.setValue<String>('Test', 'My data');
     print(isSaved.toString());
 
